@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	padding-top: 0px;
+	font-family: "微軟正黑體", "Microsoft JhengHei",'Noto Sans TC', sans-serif;
+	/* Margin bottom by footer height */
+	
+}
+#wrapper {
+	position:relative;
+	width:1200px;
+	margin-left: -600px; /*置中設定*/
+	position: absolute; /*置中設定*/
+	/*top: 50%; 置中設定*/
+	left: 50%; /*置中設定*/
+	visibility: visible;
+	}
+#p01 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	line-height: 32px;
+	margin: 0px;
+	padding-top: 10px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-left: 40px;	
+}
+#p02 {
+	font-size: 16px;
+	color: #FFF;
+	line-height: 32px;
+	margin: 0px;
+	padding-top: 10px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	background-color: #18181A;
+	
+}
+#footer {
+	font-size: 16px;
+	color: #FFF;
+	line-height: 32px;
+	margin: 0px;
+	padding-top: 10px;
+	padding-right: 100px;
+	padding-bottom: 10px;
+	padding-left: 100px;
+	background-color: #1D1C21;
+	text-align: center;
+	
+}
+.content_left {
+	padding-top: 30px;
+	padding-right: 10px;
+	padding-bottom: 30px;
+	padding-left: 10px;
+	
+}
+.content_right {
+	padding: 30px;
+	vertical-align: top;
+	color: #FFF;
+	
+}
+.content_title {
+	font-family: "微軟正黑體","Arial Black", Gadget, sans-serif;
+	font-size: 24px;
+	color: #CCC;
+	
+}
+.content_text {
+	font-size: 16px;
+	line-height: 140%;	
+}
+.content_text ul {
+	font-size: 16px;
+	line-height: 140%;	
+}
+.content_text ol {
+	font-size: 16px;
+	line-height: 140%;	
+}
+.content_line {
+	font-size: 16px;
+	line-height: 140%;
+	text-decoration: underline;
+	
+}
+.content_foreword {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-style: italic;
+	color: #FFF;
+	line-height: 160%;
+	text-align: center;	
+}
+.photo {
+	width: 700px;
+	margin-left: -750px; /*置中設定*/
+	position: relative; /*置中設定*/
+	/*top: 50%; 置中設定*/
+	left: 50%; /*置中設定*/
+	visibility: visible;
+}
+.next{
+	font-size: 12px;
+	text-align: right;
+}
+.next a{
+	color: #FFF;
+}
+.next a:hover {
+	font-size: 12px;
+	text-align: right;
+	color: #CCC;
+	text-decoration: none;
+	}
