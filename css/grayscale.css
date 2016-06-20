@@ -1,4 +1,4 @@
-/*!
+    /*!
  * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
@@ -279,7 +279,7 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 0px;
     }
 
     .download-section {
@@ -288,7 +288,7 @@ a:focus {
 
     #map {
         height: 400px;
-        margin-top: 250px;
+        margin-top: 0px;
     }
 }
 
@@ -369,3 +369,13 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
