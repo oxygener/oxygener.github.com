@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>缺氧體質自我檢查表</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<script type="text/javascript">
+
+var sum=0;
+
+function calc (argument) {
+  // body...
+
+  for (var i = $("input:checked").length - 1; i >= 0; i--) {
+   console.log( $("input")[i].value )
+   if ( 1 ) {};
+   sum = sum + parseInt($("input")[i].value);
+  };
+
+  if(sum<80)
+  {
+    alert( sum+"分 綠燈(安全)" );
+  }
+  else if( sum >= 80 && sum<= 120)
+  {
+    alert( sum+"分 黃燈(緊戒)" );
+  }
+  else if( sum > 120)
+  {
+    alert( sum+"分 紅燈(危險)" );
+  }
+}
+
+</script>
+<body>
+
+<div class="container">
+  <h1>缺氧體質自我檢查表 (v0.1)</h1>
+  <p>是請打勾，否則不打勾</p>
+  <form role="form">
+
+<h3>環境性缺氧</h3>
+<div>氧化體質</div>
+    
+    <div class="checkbox">
+      <label><input type="checkbox" value="5">1.是否住在大都會區</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5">2.是否常住狹小且空氣不良的地方</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >3.是否常處於人多擁擠的地方</label>
+    </div>
+<div class="checkbox">
+      <label><input type="checkbox" value="5" >4.是否常有口臭冒痘？</label>
+    </div>
+<div>致癌物質</div>
+    
+
+<div class="checkbox">
+      <label><input type="checkbox" value="5" >1.是否經常抽菸</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >2.是否每兩天就會吃燒烤？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >3.是否少吃蔬果？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >4.是否長期服用藥物？</label>
+    </div>
+
+<h2>血液性缺氧</h2>
+
+<div>虛寒體質</div>
+
+
+
+<div class="checkbox">
+      <label><input type="checkbox" value="10" >1.是否體溫偏低？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >2.是否手腳冰冷？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >3.是否容易感冒？</label>
+    </div>
+
+<div>貧血缺氧</div>
+
+
+
+<div class="checkbox">
+      <label><input type="checkbox" value="10" >1.是否有貧血</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >2.是否食量偏低體重過輕？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >3.是否出血量過高？</label>
+    </div>
+
+
+
+
+<h2>心肺性缺氧</h2>
+
+<div>
+酸滯體質
+</div>
+
+<div class="checkbox">
+      <label><input type="checkbox" value="10" >1.是否有呼吸中止</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="10" >2.是否有心血管疾病？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >3.是否經常性肌肉軟痛？</label>
+    </div>
+
+
+<div>肥胖少動</div>
+
+
+<div class="checkbox">
+      <label><input type="checkbox" value="10" >1.是否肥胖 </label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >2.是否每週運動少於3次？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >3.是否靜脈曲張？</label>
+    </div>
+
+  <div class="checkbox">
+      <label><input type="checkbox" value="5" >4.是否爬不到五樓就喘？</label>
+    </div>
+
+
+
+
+<h2>耗損性缺氧</h2>
+
+
+<div>老化體質</div>
+
+
+
+<div class="checkbox">
+      <label><input type="checkbox" value="5" >1.是否大於45歲</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >2.是否記憶力衰退？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >3.是否欠缺日常保健保養運動？</label>
+    </div>
+
+<div>高壓耗氧</div>
+
+
+
+<div class="checkbox">
+      <label><input type="checkbox" value="10" >1.是否常處於高壓力過勞</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >2.是否睡眠品質不良？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="5" >3.是否經常情緒焦慮？</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="10" >4.是否為肝炎或糖尿病患者</label>
+    </div>
+
+
+
+<h2>遺傳因素</h2>
+
+
+<div class="checkbox">
+      <label><input type="checkbox" value="10" >1.是否在三等親內有人40歲前罹患癌症</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="10" >2.是否身上有明顯的息肉？</label>
+    </div>
+
+80分以下 綠燈 (安全)
+<br>
+80~120分 黃燈 (警戒)
+<br>
+120以上 紅燈(危險)
+<div>
+      <button type="button" onclick="calc()" class="btn btn-default btn-lg btn-success">送出計分</button>
+</div>
+  </form>
+</div>
+
+</body>
+</html>
+
