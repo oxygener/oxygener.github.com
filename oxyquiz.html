@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>缺氧體質自我檢測器 線上簡陋版</title>
+  <title>缺氧體質自我檢測器 線上簡易版</title>
   <meta charset="utf-8">
   <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
@@ -11,17 +11,64 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+var sum=0;
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCcO4MW2IBVz91YbUB_WSVM2M8qK_-EslI",
+    authDomain: "oxyquiz.firebaseapp.com",
+    databaseURL: "https://oxyquiz.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+
+
+firebase.auth().signInAnonymously().catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+var uid;
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var isAnonymous = user.isAnonymous;
+     uid = user.uid;
+    // ...
+  } else {
+    // User is signed out.
+    // ...
+  }
+  // ...
+});
+
+function writeUserData(userId, name, score) {
+//  console.log("S"+sum);
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    userscore: sum
+  });
+}
+  
+</script>
+
+
+
 <script type="text/javascript">
 
-var sum=0;
 
 function calc (argument) {
   // body...
-
+sum=0;
   for (var i = $("input:checked").length - 1; i >= 0; i--) {
-   console.log( $("input")[i].value )
+   console.log( $("input:checked")[i].value )
    if ( 1 ) {};
-   sum = sum + parseInt($("input")[i].value);
+   sum = sum + parseInt($("input:checked")[i].value);
   };
 
   if(sum<80)
@@ -36,6 +83,8 @@ function calc (argument) {
   {
     alert( sum+"分 紅燈(危險)" );
   }
+  console.log(sum)
+  writeUserData( uid ,$("#name").val() ,parseInt(sum));
 }
 
 </script>
@@ -52,7 +101,7 @@ body
   <h1>缺氧體質自我檢測器 線上簡易版 (v0.1)</h1>
   <p>是請打勾，否則不打勾</p>
   <form role="form">
-
+姓名<input id="name" type="text" />
 <h3>環境性缺氧</h3>
 <div>氧化體質</div>
     
